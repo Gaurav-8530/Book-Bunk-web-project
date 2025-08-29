@@ -84,7 +84,7 @@ await mongoose.connect(dbUrl);
 };
 
 let PORT = process.env.PORT || 8080;
-app.listen(port,"0.0.0.0",()=>{
+app.listen(PORT,"0.0.0.0",()=>{
   console.log(`server is listening on port:${PORT}`);
 });
 
