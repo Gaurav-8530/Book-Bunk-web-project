@@ -20,7 +20,7 @@ const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
 
-const dbUrl = process.env.ATLASDB_url;
+const dbUrl = process.env.ATLASDB_URL;
 
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));
