@@ -33,8 +33,27 @@ body{
 
 .nav-link{
    font-size: smaller;
-   color:#eb2c0a !important;
+   color:black;
 }
+
+.filter{
+    font-size: 12px;
+}
+
+.tax-toggle{
+    border: 1px solid black;
+    border-radius: 1rem;
+    height: 2.5rem !important;
+    background-color: black;
+    color:white;
+    padding: 1rem;
+    margin-left: 3rem !important;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 2vw;
+  }
+  
 }
 
 
