@@ -12,6 +12,31 @@ body{
 .navbar{
     height:4rem;
 }
+@media(min-width:992px){
+ .navbar-nav .sacu{
+   font-weight:bolder;
+}
+}
+
+@media(max-width:991px){
+.navbar-collapse{
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid #dee2e6;
+}
+
+.navbar-collapse .navbar-nav{
+    margin: 0 !important;
+    display:flex;
+    flex-direction:column;
+    align-items: start;
+}
+
+.nav-link{
+   font-size: smaller;
+   color:#eb2c0a !important;
+}
+}
+
 
 .nav-link{
     color:black;
@@ -86,3 +111,4 @@ body{
 .btns{
     display:flex;
 }
+
