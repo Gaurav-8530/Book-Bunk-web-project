@@ -83,9 +83,9 @@ async function main(){
 await mongoose.connect(dbUrl);
 };
 
-let port = 8080;
-app.listen(port,()=>{
-  console.log(`server is listening on port:${port}`);
+let PORT = process.env.PORT || 8080;
+app.listen(port,"0.0.0.0",()=>{
+  console.log(`server is listening on port:${PORT}`);
 });
 
 app.use("/listings",listingRouter);
