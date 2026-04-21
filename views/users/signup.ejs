@@ -1,26 +1,55 @@
 <% layout("/layouts/boilerplate") %>
 
-<div class="row">
-    <h2 class="col-8 offset-2">Signup on BooknbunK</h2>
-        <div class="col-8 offset-2">
-            <form action="/signup" method = "post">
-            <div class="mb-3" class="needs-validation" novalidate>
-            <label for="username" class="form-label">Username</label>
-            <input name="username" id="username" type="text" class="form-control" required>
-            <div class="valid-feedback">Looks good!</div>
-            </div>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-7 col-sm-10">
 
-            <div class="mb-3" class="needs-validation" novalidate>
-            <label for="email" class="form-label">Email</label>
-            <input name="email" id="email" type="email" class="form-control" required>
-            </div>
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4">
 
-            <div class="mb-3" class="needs-validation" novalidate>
-            <label for="password" class="form-label">Password</label>
-            <input name="password" id="password" type="password" class="form-control" required>
-            </div>
+                        <h3 class="text-center mb-4">Signup on BooknBunk</h3>
 
-            <button class="btn btn-success">Signup</button>
-            </form>
+                        <form action="/signup" method="post" novalidate class="needs-validation">
+
+                            <!-- Username -->
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input name="username" id="username" type="text" class="form-control" required>
+                                <div class="valid-feedback">Looks good!</div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input name="email" id="email" type="email" class="form-control" required>
+                                <div class="invalid-feedback">Enter a valid email</div>
+                            </div>
+
+                            <!-- Password -->
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input name="password" id="password" type="password" class="form-control" required>
+                                <div class="invalid-feedback">Enter a password</div>
+                            </div>
+
+                            <!-- Button -->
+                            <div class="d-grid">
+                                <button class="btn btn-success">Signup</button>
+                            </div>
+
+                        </form>
+
+                        <!-- Extra Link -->
+                        <div class="text-center mt-3">
+                            <small>
+                                Already have an account?
+                                <a href="/login">Login</a>
+                            </small>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
-</div>
+    </div>

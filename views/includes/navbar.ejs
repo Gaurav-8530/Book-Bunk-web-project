@@ -1,24 +1,50 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top border-bottom">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/listings"><i class="fa-brands fa-slack fa-xl" style="color: #eb2c0a;"></i></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+<nav class="navbar navbar-expand-lg bg-white sticky-top border-bottom shadow-sm">
+  <div class="container">
+
+    <!-- Brand -->
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="/listings">
+      <i class="fa-brands fa-slack fa-lg text-danger"></i>
+      BooknBunk
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse mt-3" id="navbarNavAltMarkup">
-      <div class="navbar-nav ms-4">
-        <a class="nav-link" href="/listings">EXPLORE</a>
-        <a class="nav-link" href="/listings/new">BOOK & BUNK HOME</a>
-      </div>
-      <div class="navbar-nav ms-auto">
-        
-       <% if(!currUser) { %>
-        <a class="nav-link sacu" href="/signup">Sign up</a>
-        <a class="nav-link sacu" href="/login">Log in</a>
-        <% } %>
-        <% if(currUser) { %>
-        <a class="nav-link sacu" href="/logout">Log out</a>
-        <% } %>
-      </div>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <!-- Left Links -->
+      <ul class="navbar-nav ms-lg-4 mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="/listings">Explore</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="/listings/new">Add Listing</a>
+        </li>
+      </ul>
+
+      <!-- Right Links -->
+      <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+
+        <% if(!currUser) { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup">Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Log in</a>
+          </li>
+          <% } %>
+
+            <% if(currUser) { %>
+              <li class="nav-item">
+                <a class="nav-link text-danger fw-semibold" href="/logout">Log out</a>
+              </li>
+              <% } %>
+
+      </ul>
+
     </div>
-  </div> 
+  </div>
 </nav>

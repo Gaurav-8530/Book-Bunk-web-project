@@ -29,9 +29,10 @@ app.use(express.json());
 app.use(methodOverride("_method"));
 app.engine("ejs",ejsMate);
 app.use(express.static(path.join(__dirname,"public")));
+const MONGO_URL = process.env.ATLASDB_URL;
 
 const store = MongoStore.create({
-  mongoUrl: dbUrl,
+  mongoUrl: MONGO_URL,
   crypto: {
     secret: process.env.SECRET,
   },
@@ -40,7 +41,7 @@ const store = MongoStore.create({
 
 store.on("error", () => {
   console.log("ERROR IN SESSION MONGO SESSION STORE");
-})
+});
 
 const sessionOptions = {
   store,
@@ -80,7 +81,7 @@ main()
 });
 
 async function main(){
-await mongoose.connect(dbUrl);
+await mongoose.connect(MONGO_URL);
 };
 
 let PORT = process.env.PORT || 8080;
